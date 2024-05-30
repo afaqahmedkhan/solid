@@ -13,4 +13,30 @@ public class AreaCalculator implements IAreaCalculator {
         return sum;
     }
 
+    /**
+     * This method breaks the single responsibility principle
+     * Each class should have only one sole purpose,
+     * This method is moved to ShapesPrinter class for the
+     * sake of single responsibility principle
+     * @param shapes
+     * @return
+     */
+    public String json(List<Shape> shapes) {
+        return "{sum: %d}".formatted(sum(shapes));
+
+    }
+
+    /**
+     * This method breaks the single responsibility principle
+     * Each class should have only one sole purpose,
+     * This method is moved to ShapesPrinter class for the
+     * sake of single responsibility principle
+     * @param shapes
+     * @return
+     */
+    public String csv(List<Shape> shapes) {
+        return "sum,%s".formatted(sum(shapes));
+
+    }
+
 }
