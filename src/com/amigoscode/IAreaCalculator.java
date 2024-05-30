@@ -7,6 +7,7 @@ public interface IAreaCalculator {
 
     class Main {
         public static void main(String[] args) {
+
             IAreaCalculator areaCalculator = new AreaCalculator();
             IAreaCalculator areaCalculatorV2 = new AreaCalculatorV2();
             Circle circle = new Circle(10);
